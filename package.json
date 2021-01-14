@@ -1,0 +1,23 @@
+{
+  "name": "react-lite-app-esbuild",
+  "version": "0.1.0",
+  "description": "Create a nice and clean react project. Made with EsBuild",
+  "scripts": {
+    "build": "node build.js",
+    "power": "chokidar 'src/' -c 'npm run build'",
+    "server": "wds --node-resolve --app-index --open build/index.html --watch",
+    "dev": "npm run power | npm run server"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.4",
+    "chokidar-cli": "^2.1.0",
+    "esbuild": "^0.8.6"
+  }
+}
