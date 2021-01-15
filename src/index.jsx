@@ -1,9 +1,10 @@
-import React, { lazy, Suspense } from "react";
+import * as React from "react";
 import ReactDOM from "react-dom";
 import './index.css'
+
 import LoadPage from './Components/LoadPage'
-const App = lazy(() => import("./App"));
+const App = React.lazy(() => import("./App"));
 
 ReactDOM.render(
-  <Suspense fallback={<LoadPage />} ><App /></Suspense>,
+  <React.Suspense fallback={<LoadPage />} ><App /></React.Suspense>,
   document.getElementById("app"))

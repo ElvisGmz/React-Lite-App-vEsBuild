@@ -5,14 +5,13 @@
   "scripts": {
     "build": "node build.js",
     "power": "chokidar 'src/' -c 'npm run build'",
-    "server": "wds --node-resolve --app-index --open build/index.html --watch",
+    "server": "wds --node-resolve --app-index build/ --root-dir='build' --open --watch",
     "dev": "npm run power | npm run server"
   },
   "license": "MIT",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
