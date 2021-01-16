@@ -4,19 +4,19 @@
   "description": "Create a nice and clean react project. Made with EsBuild",
   "scripts": {
     "build": "node build.js",
-    "power": "chokidar 'src/' -c 'npm run build'",
+    "power": "onchange -i -k 'src/**/*' -- node build.js",
     "server": "wds --node-resolve --app-index build/ --root-dir='build' --open --watch",
     "dev": "npm run power | npm run server"
   },
   "license": "MIT",
   "dependencies": {
+    "onchange": "^7.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@web/dev-server": "^0.1.4",
-    "chokidar-cli": "^2.1.0",
     "esbuild": "^0.8.6"
   }
 }
