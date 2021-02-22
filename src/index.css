@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
+@font-face {
+  font-family: "HightSpeed";
+  src: url("fonts/HighSpeed.ttf");
+}
 
 body {
   background-color: #fa8bff;
@@ -30,17 +33,18 @@ header {
 
 h1 {
   color: #21212c;
-  font-family: "Faster One", cursive;
-  font-size: 56px;
+  font-family: "HightSpeed";
+  font-size: 45px;
   margin-bottom: 0;
 }
 
 h5 {
   color: #21212c;
   margin: 0;
-  font-family: "Faster One", cursive;
-  font-size: 28px;
+  font-family: "HightSpeed";
+  font-size: 24px;
   margin-bottom: 1.5rem;
+  animation: pulseText 2s infinite;
 }
 
 p {
@@ -70,13 +74,13 @@ p {
   z-index: 10;
   margin-top: -140px;
   margin-left: -220px;
-  animation: pulse 0.8s infinite;
+  animation: pulse 2s infinite;
 }
 
 #logo img:first-child {
   width: 100%;
   max-width: 200px;
-  animation: rotate 0.8s infinite;
+  animation: rotate 2s infinite;
 }
 
 a img {
@@ -86,9 +90,17 @@ a img {
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
+    -webkit-filter: drop-shadow(0px 0px 0px transparent);
+    filter: drop-shadow(0px 0px 0px transparent);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0px 0px 15px #ffcf00);
+    filter: drop-shadow(0px 0px 15px #ffcf00);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(1080deg);
+    -webkit-filter: drop-shadow(0px 0px 0px transparent);
+    filter: drop-shadow(0px 0px 0px transparent);
   }
 }
 
@@ -96,8 +108,22 @@ a img {
   0%,
   100% {
     transform: translateX(0px);
+    filter: grayscale(100%);
   }
   50% {
     transform: translateX(25px);
+    filter: grayscale(0%);
+  }
+}
+
+@keyframes pulseText {
+  0%,
+  100% {
+    color: #21212c;
+    text-shadow: 0 0 0px transparent;
+  }
+  50% {
+    color: #ffcf00;
+    text-shadow: 0 0 5px #21212c;
   }
 }
