@@ -19,7 +19,8 @@ El modulo se auto destruye para solo dejar tu proyecto creado y listo :) por lo 
 > De esta manera solo necesitaras una linea para poder usarlo y listo podras usarlo
 
 # Correr en modo desarrollo
-```npm run dev```
+```npm start```
+> En la carpeta ```/public``` tienes lo que podras modificar sin afectar tu carpeta de produccion ```/build```
 
 # En la version EsBuild si tienes algun problema en su lugar puedes ejecutar:
 ```npm run power | npm run server```

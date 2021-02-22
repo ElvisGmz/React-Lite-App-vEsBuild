@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
-
+@import "https://fonts.googleapis.com/css2?family=Faster+One&display=swap";
 body {
   background-color: #fa8bff;
   background-image: linear-gradient(
@@ -22,19 +21,16 @@ body {
   font-size: 18px;
   font-style: italic;
 }
-
 header {
   font-size: 22px;
   position: relative;
 }
-
 h1 {
   color: #21212c;
   font-family: "Faster One", cursive;
   font-size: 56px;
   margin-bottom: 0;
 }
-
 h5 {
   color: #21212c;
   margin: 0;
@@ -42,11 +38,9 @@ h5 {
   font-size: 28px;
   margin-bottom: 1.5rem;
 }
-
 p {
   font-size: 16px;
 }
-
 #logo {
   margin-top: 1rem;
   width: 100%;
@@ -58,12 +52,10 @@ p {
   aspect-ratio: 1 / 1;
   margin-bottom: 6rem;
 }
-
 #logo img {
   -webkit-filter: drop-shadow(0px 0px 10px #21212c);
   filter: drop-shadow(0px 0px 10px #21212c);
 }
-
 #logo img:last-child {
   width: 100%;
   max-width: 75px;
@@ -72,29 +64,25 @@ p {
   margin-left: -220px;
   animation: pulse 0.8s infinite;
 }
-
 #logo img:first-child {
   width: 100%;
   max-width: 200px;
   animation: rotate 0.8s infinite;
 }
-
 a img {
   max-height: 40px;
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
-
 @keyframes pulse {
   0%,
-  100% {
+  to {
     transform: translateX(0px);
   }
   50% {

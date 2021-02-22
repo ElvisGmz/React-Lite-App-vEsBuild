@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "Create a nice and clean react project. Made with EsBuild",
   "scripts": {
-    "build": "node build.js",
-    "power": "onchange -i -k 'src/**/*' -- node build.js",
-    "server": "wds --node-resolve --app-index build/ --root-dir='build' --open --watch",
-    "dev": "npm run power | npm run server"
+    "start": "npm run power | npm run server",
+    "build": "node ./configs/build.js",
+    "power": "onchange -i -k 'src/**/*' -- node ./configs/dev-server.js",
+    "server": "wds --node-resolve --app-index public/ --root-dir='public' --port=3000 --open --watch"
   },
   "license": "MIT",
   "dependencies": {
